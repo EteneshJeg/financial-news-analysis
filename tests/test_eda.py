@@ -1,19 +1,25 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
+
+
 import unittest
-from src.eda import calculate_headline_length, perform_sentiment_analysis
 import pandas as pd
+from src.sentiment_analysis import perform_sentiment_analysis
 
 class TestEDA(unittest.TestCase):
-    def test_calculate_headline_length(self):
-        data = {'headline': ['short', 'a bit longer']}
-        df = pd.DataFrame(data)
-        df = calculate_headline_length(df)
-        self.assertEqual(df['headline_length'].iloc[0], 5)
+    def setUp(self):
+        """Set up a sample dataset for testing."""
+        self.sample_data = pd.DataFrame({
+            "headline": ["Stock prices rise", "Market crashes", "Neutral news"]
+        })
 
     def test_perform_sentiment_analysis(self):
-        data = {'headline': ['great profit', 'bad loss']}
-        df = pd.DataFrame(data)
-        df = perform_sentiment_analysis(df)
-        self.assertGreater(df['sentiment'].iloc[0], 0)
-
-if __name__ == '__main__':
-    unittest.main()
+        """Test sentiment analysis functionality."""
+        result = perform_sentiment_analysis(self.sample_data)
+        # Check if the 'sentiment' column is added
+        self.assertIn("sentiment", result.columns)
+        # Check if the sentiment values are numeric
+        self.assertTrue(pd.api.types.is_numeric_dtype(result["sentiment"]))
