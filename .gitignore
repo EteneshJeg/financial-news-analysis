@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# data folder 
+data/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.*
+
+# Virtual environment
+venv/
+.venv/
+
+# VSCode settings
+.vscode/
+
+# Logs
+*.log
+*.out
+*.err
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Test results
+test-results/
+
+# Coverage reports
+htmlcov/
+coverage.xml
+*.coverage
+
+# GitHub workflow artifacts
+.github/workflows/*.log
+
+# Package files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Other IDE-specific settings
+.idea/
+*.iml
