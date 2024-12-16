@@ -5,3 +5,7 @@ nltk
 scikit-learn
 pytest
 textblob
+TA-Lib
+PyNance
+yfinance
+pynance 

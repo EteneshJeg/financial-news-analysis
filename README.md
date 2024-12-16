@@ -1,15 +1,19 @@
-# Financial News Analysis
+# Financial News and Stock Analysis
 
-## Description
-Analyze financial news headlines to discover correlations between sentiment and stock market movements.
+This project performs sentiment analysis on financial news headlines and conducts technical analysis of stock price data.
 
 ## Features
-- Sentiment Analysis
-- Time Series Trends
-- Publisher Insights
+
+### Sentiment Analysis
+- Analyze headlines for sentiment (positive, negative, or neutral).
+- Calculate headline lengths for descriptive statistics.
+
+### Financial Analysis
+- Load stock price data using `yfinance`.
+- Calculate key technical indicators:
+  - Simple Moving Average (SMA)
+  - Relative Strength Index (RSI)
+  - Moving Average Convergence Divergence (MACD)
+- Visualize stock price trends and indicators.
 
 ## Folder Structure
-- `src/`: Core Python scripts
-- `notebooks/`: Jupyter notebooks for EDA
-- `tests/`: Unit tests
-- `.github/`: CI/CD workflows
