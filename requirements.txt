@@ -8,4 +8,5 @@ textblob
 TA-Lib
 PyNance
 yfinance
-pynance 
+pynance
+scipy
